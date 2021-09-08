@@ -29,3 +29,30 @@ class WordFinder:
         # import random file 
         # random.choice(self.file_name)
         return random.choice(self.words_container)
+
+
+class SpecialWordFinder(WordFinder):
+    def __init__(self, file_name):
+        """Open user provide file and print the number of words that are not comments"""
+        super().__init__(file_name)
+        
+
+    def read_file(self):
+        """read the user provide file, remove new line characters and comments, count the words in the file and return the word count"""
+        unclean = super().read_file()
+        print(unclean)
+        #loop through super created array
+            #if word[0] == #
+                # skip
+            # if word[0] == ""
+                #  skip
+            # else 
+            #   add to new array
+        # return new array
+        # speacial_chars_removed = []
+        # for word in unclean:
+        #     if word[0] == "#" or word[0] == "\n":
+        #         continue
+        #     else:
+        #         speacial_chars_removed.append(word)
+        # return speacial_chars_removed
